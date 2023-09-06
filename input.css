@@ -1,0 +1,5 @@
+.nav:hover{
+    border-bottom: 2px solid cyan;
+    padding-bottom: 5px;
+    transition-duration: 0.3s;
+}
