@@ -3,3 +3,148 @@
     padding-bottom: 5px;
     transition-duration: 0.3s;
 }
+
+/* Add this CSS to your existing styles */
+@media (min-width: 768px) {
+    #mobileMenu {
+      display: none; /* Hide mobileMenu on screens wider than 768px */
+    }
+  }
+
+  #mobileMenu {
+    z-index: 9990;
+  }
+  .navBar {
+    z-index: 9999;
+  }
+
+.bg-clip-content {
+    background-clip: content-box;
+}
+
+.slider-container {
+    padding: 1rem;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 120rem;
+    max-height: fit-content;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-item {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .slide-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .slider-item:hover .slide-description {
+    display: flex;
+    opacity: 1;
+  }
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #0996ee;
+    opacity: 0.50;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 100%;
+}
+
+.slider-prev,
+.slider-next {
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0996ee;
+}
+
+
+.slider-prev {
+  left: 1rem;
+}
+
+.slider-next {
+  right: 1rem;
+}
+
+.barlow {
+    font-family: 'Barlow', sans-serif;
+}
+
+
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+  }
+ 
+
+  .dark-mode h1,
+  .dark-mode h2,
+  .dark-mode h3,
+  .dark-mode h4,
+  .dark-mode h5,
+  .dark-mode h6,
+  .dark-mode p,
+  .dark-mode a,
+  .dark-mode span,
+  .dark-mode body,
+  .dark-mode div {
+    color: #ffffff;
+  }
+  
+  .dark-mode .bg-white {
+    background-color: #333333;
+  }
